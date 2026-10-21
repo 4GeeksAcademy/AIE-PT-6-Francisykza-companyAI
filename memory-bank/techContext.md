@@ -1,6 +1,6 @@
 # Contexto técnico
 
-Verificado contra el repositorio el 2026-10-16 (rama `feature/agent-memory-bank`, sobre `main`). Leyenda: ✅ comprobado leyendo el archivo indicado · ❓ sin ejecutar o sin decidir.
+Verificado contra el repositorio el 2026-10-21 (rama `feature/public-website`, sobre `feature/agent-memory-bank`). Leyenda: ✅ comprobado leyendo el archivo indicado · ❓ sin ejecutar o sin decidir.
 
 ## Estado de partida
 
@@ -16,6 +16,8 @@ Verificado contra el repositorio el 2026-10-16 (rama `feature/agent-memory-bank`
 | Un agente por subcarpeta de `agents/`, partiendo de `agents/_template/`. | `agents/README.md` |
 | Si dos carpetas necesitan el mismo código o tipos, se extrae a `packages/` (hoy existe `@repo/shared-types` en `packages/shared`). | `README.md`, `packages/shared/package.json` |
 | `docker-compose.yml` va en la raíz del repo. | `README.md` |
+| **Web pública (`uis/website`)**: HTML estático + **Tailwind CSS v4** con el CDN `@tailwindcss/browser@4` (no `cdn.tailwindcss.com` ni sintaxis de v3) + JavaScript sin dependencias solo para validar el formulario. Sin CSS escrito a mano. Se sirve con `npx http-server`. Es una primera versión sin framework. | enunciado del hito «Sitio web público» |
+| Los estados del formulario se estilan con `aria-invalid:` y `data-[valid=true]:` de Tailwind; las reglas de validación son funciones puras en `uis/website/validation.js`, probadas con `node:test`. | `uis/website/README.es.md` |
 | Configuración de agentes de código en `.agents/` (reglas y skills de desarrollo), distinta de `agents/` y `skills/`, que son código de producto. | enunciado del hito |
 
 ## Entorno de desarrollo (`.devcontainer/devcontainer.json`)
@@ -38,7 +40,7 @@ Verificado contra el repositorio el 2026-10-16 (rama `feature/agent-memory-bank`
 
 ## Pendiente de decidir (no inventar: preguntar)
 
-- Framework de `uis/website` y de `uis/backoffice`.
+- Framework de `uis/backoffice` (para `uis/website` la primera versión es HTML + Tailwind CDN; ¿migrar a un framework más adelante?).
 - Base de datos y modelo de datos (locales, ventas, stock, proveedores, pedidos).
 - Autenticación y roles del backoffice.
 - Cómo se representan importes con moneda y las zonas horarias en la API.
@@ -49,4 +51,6 @@ Cada vez que se decida una de estas cosas, se pasa a la tabla de decisiones de a
 
 ## Comandos
 
-❓ Todavía no hay comandos de arranque, prueba o build: no hay aplicaciones. Cuando exista el primer servicio o interfaz, añade aquí su comando y marca ✅ solo lo que se haya ejecutado.
+- ✅ Pruebas de validación del sitio: `node --test uis/website/validation.test.js` (ejecutado el 2026-10-21: 10 pasan, 0 fallan).
+- ❓ Servir la web: `npx http-server uis/website -p 3000 -a 0.0.0.0` (puerto 3000 ya reenviado por el devcontainer). **No ejecutado todavía.**
+- ❓ Aún no hay comandos para `services/` ni para `uis/backoffice`. Cuando existan, añade su comando y marca ✅ solo lo que se haya ejecutado.

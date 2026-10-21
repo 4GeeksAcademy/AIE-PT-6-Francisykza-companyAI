@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <title>Ilustración de una parrilla con brasas</title>
+  <desc>Ilustración abstracta: llamas naranjas sobre una parrilla de barras oscuras con brasas rojas debajo.</desc>
+  <rect width="640" height="480" fill="#292524"/>
+  <g fill="#ea580c">
+    <path d="M150 300c10-60 60-80 50-150 50 40 80 90 60 150z"/>
+    <path d="M300 300c14-90 80-110 70-210 70 60 110 130 80 210z"/>
+    <path d="M460 300c8-50 40-66 34-120 40 32 60 74 44 120z"/>
+  </g>
+  <g fill="#fdba74">
+    <path d="M190 300c4-28 26-38 22-70 24 18 36 42 26 70z"/>
+    <path d="M340 300c6-44 36-54 32-100 34 30 52 64 38 100z"/>
+  </g>
+  <g fill="#a8a29e">
+    <rect x="60" y="300" width="520" height="12" rx="6"/>
+    <rect x="60" y="332" width="520" height="12" rx="6"/>
+    <rect x="60" y="364" width="520" height="12" rx="6"/>
+  </g>
+  <g fill="#b91c1c">
+    <circle cx="110" cy="420" r="16"/><circle cx="190" cy="426" r="12"/><circle cx="270" cy="418" r="18"/>
+    <circle cx="360" cy="426" r="13"/><circle cx="440" cy="418" r="17"/><circle cx="520" cy="424" r="13"/>
+  </g>
+</svg>

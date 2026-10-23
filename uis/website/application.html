@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro en Brasa Points | Brasaland</title>
+  <meta name="description" content="Regístrate en Brasa Points, el programa de fidelización digital de Brasaland en Colombia y Florida.">
+  <meta name="theme-color" content="#7c2d12">
+  <link rel="icon" type="image/svg+xml" href="assets/brasaland-logo.svg">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="validation.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-stone-50 text-stone-800 antialiased">
+  <a href="#contenido" class="sr-only rounded bg-orange-700 px-3 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50">Saltar al contenido</a>
+
+  <header class="border-b border-stone-200 bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <a href="index.html" class="flex items-center gap-3 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700" aria-label="Brasaland, ir al inicio">
+        <img src="assets/brasaland-logo.svg" width="44" height="44" alt="Logotipo de Brasaland: una llama sobre un círculo marrón rojizo" class="h-11 w-11">
+        <span class="text-2xl font-extrabold tracking-tight text-stone-900">Brasaland</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm font-medium sm:text-base">
+          <li><a href="index.html#por-que-brasaland" class="rounded px-1 py-2 text-stone-800 underline-offset-4 hover:text-orange-800 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Por qué Brasaland</a></li>
+          <li><a href="index.html#experiencia" class="rounded px-1 py-2 text-stone-800 underline-offset-4 hover:text-orange-800 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Experiencia</a></li>
+          <li><a href="index.html#brasa-points" class="rounded px-1 py-2 text-stone-800 underline-offset-4 hover:text-orange-800 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Brasa Points</a></li>
+          <li><a href="index.html#contacto" class="rounded px-1 py-2 text-stone-800 underline-offset-4 hover:text-orange-800 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Contacto</a></li>
+          <li><a href="application.html" aria-current="page" class="inline-block rounded-full bg-orange-700 px-4 py-2 font-semibold text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Regístrate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <section aria-labelledby="titulo-registro">
+      <p class="text-sm font-semibold uppercase tracking-widest text-orange-800">Brasa Points</p>
+      <h1 id="titulo-registro" class="mt-2 text-3xl font-extrabold text-stone-900 sm:text-4xl">Regístrate en Brasa Points</h1>
+      <p class="mt-3 text-lg text-stone-700">Completa tus datos para unirte al programa de fidelización digital de Brasaland. Los campos marcados con <span class="text-red-700" aria-hidden="true">*</span><span class="sr-only">asterisco</span> son obligatorios.</p>
+      <p class="mt-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-950 ring-1 ring-amber-300"><strong>Versión de demostración:</strong> el formulario valida tus datos, pero todavía no los envía ni los guarda en ningún sitio.</p>
+        <form id="formulario-registro" action="#" method="post" novalidate aria-labelledby="titulo-registro" class="mt-8 space-y-6">
+
+          <div id="resumen-errores" role="alert" tabindex="-1" hidden class="rounded-xl border-l-4 border-red-700 bg-red-50 p-4 text-red-950">
+            <h2 class="text-lg font-bold">Revisa estos campos antes de enviar</h2>
+            <ul id="lista-errores" class="mt-2 list-disc space-y-1 pl-5 [&_a]:font-semibold [&_a]:underline [&_a]:underline-offset-4"></ul>
+          </div>
+
+          <fieldset class="rounded-2xl border border-stone-300 bg-white p-5 sm:p-6">
+            <legend class="px-2 text-lg font-bold text-stone-900">Tus datos</legend>
+        <div data-field="nombre" class="mt-4 first:mt-0">
+          <label for="nombre" class="block text-sm font-semibold text-stone-900">Nombre<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <input id="nombre" name="nombre" type="text" required autocomplete="given-name" maxlength="60" aria-describedby="hint-nombre error-nombre" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+          <p id="hint-nombre" class="mt-1 text-sm text-stone-700">Solo letras, espacios, guiones o apóstrofes. Entre 2 y 60 caracteres.</p>
+          <p id="error-nombre" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+        <div data-field="apellidos" class="mt-4 first:mt-0">
+          <label for="apellidos" class="block text-sm font-semibold text-stone-900">Apellidos<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <input id="apellidos" name="apellidos" type="text" required autocomplete="family-name" maxlength="60" aria-describedby="hint-apellidos error-apellidos" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+          <p id="hint-apellidos" class="mt-1 text-sm text-stone-700">Solo letras, espacios, guiones o apóstrofes. Entre 2 y 60 caracteres.</p>
+          <p id="error-apellidos" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+        <div data-field="email" class="mt-4 first:mt-0">
+          <label for="email" class="block text-sm font-semibold text-stone-900">Correo electrónico<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" maxlength="254" aria-describedby="hint-email error-email" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+          <p id="hint-email" class="mt-1 text-sm text-stone-700">Ejemplo: nombre@correo.com</p>
+          <p id="error-email" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+        <div data-field="fecha_nacimiento" class="mt-4 first:mt-0">
+          <label for="fecha_nacimiento" class="block text-sm font-semibold text-stone-900">Fecha de nacimiento<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <input id="fecha_nacimiento" name="fecha_nacimiento" type="date" required autocomplete="bday" aria-describedby="hint-fecha_nacimiento error-fecha_nacimiento" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+          <p id="hint-fecha_nacimiento" class="mt-1 text-sm text-stone-700">Debes ser mayor de 18 años para unirte al programa.</p>
+          <p id="error-fecha_nacimiento" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+          </fieldset>
+
+          <fieldset class="rounded-2xl border border-stone-300 bg-white p-5 sm:p-6">
+            <legend class="px-2 text-lg font-bold text-stone-900">Dónde nos visitas</legend>
+        <div data-field="pais" class="mt-4 first:mt-0">
+          <label for="pais" class="block text-sm font-semibold text-stone-900">País<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <select id="pais" name="pais" required autocomplete="country" aria-describedby="hint-pais error-pais" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+            <option value="">Selecciona tu país</option>
+            <option value="CO">Colombia</option>
+            <option value="US">Estados Unidos (Florida)</option>
+          </select>
+          <p id="hint-pais" class="mt-1 text-sm text-stone-700">Brasaland tiene restaurantes en Colombia y en Florida.</p>
+          <p id="error-pais" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+        <div data-field="codigo_postal" class="mt-4 first:mt-0">
+          <label for="codigo_postal" class="block text-sm font-semibold text-stone-900">Código postal<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <input id="codigo_postal" name="codigo_postal" type="text" required autocomplete="postal-code" maxlength="6" inputmode="numeric" aria-describedby="hint-codigo_postal error-codigo_postal" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+          <p id="hint-codigo_postal" class="mt-1 text-sm text-stone-700">Colombia: 6 dígitos. Estados Unidos: código de 5 dígitos de Florida (32003 a 34997).</p>
+          <p id="error-codigo_postal" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+        <div data-field="telefono" class="mt-4 first:mt-0">
+          <label for="telefono" class="block text-sm font-semibold text-stone-900">Teléfono móvil<span class="text-red-700" aria-hidden="true"> *</span></label>
+          <input id="telefono" name="telefono" type="tel" required autocomplete="tel" maxlength="20" aria-describedby="hint-telefono error-telefono" class="mt-1 block w-full rounded-lg border border-stone-500 bg-white px-3 py-2 text-base text-stone-900 placeholder:text-stone-500 focus:border-orange-700 focus:outline-2 focus:outline-offset-2 focus:outline-orange-700 aria-invalid:border-red-700 aria-invalid:bg-red-50 data-[valid=true]:border-emerald-700">
+          <p id="hint-telefono" class="mt-1 text-sm text-stone-700">Colombia: celular de 10 dígitos que empieza por 3. Estados Unidos: 10 dígitos. El prefijo del país es opcional.</p>
+          <p id="error-telefono" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+          </fieldset>
+
+          <fieldset class="rounded-2xl border border-stone-300 bg-white p-5 sm:p-6">
+            <legend class="px-2 text-lg font-bold text-stone-900">Tu programa Brasa Points</legend>
+        <fieldset data-field="idioma" aria-describedby="hint-idioma error-idioma" class="mt-4 first:mt-0">
+          <legend class="block text-sm font-semibold text-stone-900">Idioma preferido para tus mensajes<span class="text-red-700" aria-hidden="true"> *</span></legend>
+          <div class="mt-2 flex flex-col gap-2 sm:flex-row sm:gap-6">
+            <label class="flex items-center gap-2 text-stone-900"><input type="radio" name="idioma" value="es" required class="h-5 w-5 accent-orange-700 aria-invalid:outline-2 aria-invalid:outline-red-700"> Español</label>
+            <label class="flex items-center gap-2 text-stone-900"><input type="radio" name="idioma" value="en" required class="h-5 w-5 accent-orange-700 aria-invalid:outline-2 aria-invalid:outline-red-700"> English</label>
+          </div>
+          <p id="hint-idioma" class="mt-1 text-sm text-stone-700">Elige el idioma en el que quieres leernos.</p>
+          <p id="error-idioma" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </fieldset>
+        <fieldset data-field="tarjeta_sellos" aria-describedby="hint-tarjeta_sellos error-tarjeta_sellos" class="mt-4 first:mt-0">
+          <legend class="block text-sm font-semibold text-stone-900">¿Tienes una tarjeta física de sellos?<span class="text-red-700" aria-hidden="true"> *</span></legend>
+          <div class="mt-2 flex flex-col gap-2 sm:flex-row sm:gap-6">
+            <label class="flex items-center gap-2 text-stone-900"><input type="radio" name="tarjeta_sellos" value="si" required class="h-5 w-5 accent-orange-700 aria-invalid:outline-2 aria-invalid:outline-red-700"> Sí</label>
+            <label class="flex items-center gap-2 text-stone-900"><input type="radio" name="tarjeta_sellos" value="no" required class="h-5 w-5 accent-orange-700 aria-invalid:outline-2 aria-invalid:outline-red-700"> No</label>
+          </div>
+          <p id="hint-tarjeta_sellos" class="mt-1 text-sm text-stone-700">Nos ayuda a pasar tus sellos al programa digital.</p>
+          <p id="error-tarjeta_sellos" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </fieldset>
+        <fieldset data-field="canales_contacto" aria-describedby="hint-canales_contacto error-canales_contacto" class="mt-4">
+          <legend class="block text-sm font-semibold text-stone-900">Cómo quieres recibir novedades<span class="text-red-700" aria-hidden="true"> *</span></legend>
+          <div class="mt-2 flex flex-col gap-2">
+            <label class="flex items-center gap-2 text-stone-900"><input type="checkbox" name="canales_contacto" value="email" class="h-5 w-5 accent-orange-700"> Correo electrónico</label>
+            <label class="flex items-center gap-2 text-stone-900"><input type="checkbox" name="canales_contacto" value="mensaje" class="h-5 w-5 accent-orange-700"> Mensaje al móvil (SMS o WhatsApp)</label>
+            <label class="flex items-center gap-2 text-stone-900"><input type="checkbox" name="canales_contacto" value="ninguno" class="h-5 w-5 accent-orange-700"> No quiero recibir novedades</label>
+          </div>
+          <p id="hint-canales_contacto" class="mt-1 text-sm text-stone-700">Elige al menos una opción. «No quiero recibir novedades» no se combina con las demás.</p>
+          <p id="error-canales_contacto" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </fieldset>
+          </fieldset>
+
+        <div data-field="acepta_privacidad">
+          <label class="flex items-start gap-3 text-stone-900"><input id="acepta_privacidad" type="checkbox" name="acepta_privacidad" value="si" required aria-describedby="error-acepta_privacidad" class="mt-1 h-5 w-5 shrink-0 accent-orange-700"> <span>Acepto que Brasaland use estos datos para gestionar mi participación en Brasa Points.<span class="text-red-700" aria-hidden="true"> *</span></span></label>
+          <p id="error-acepta_privacidad" class="mt-1 text-sm font-semibold text-red-700 empty:hidden" aria-live="polite"></p>
+        </div>
+
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <button type="submit" class="rounded-full bg-orange-700 px-6 py-3 font-semibold text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Registrarme</button>
+            <button type="reset" class="rounded-full px-6 py-3 font-semibold text-stone-900 ring-1 ring-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700">Limpiar formulario</button>
+          </div>
+        </form>
+
+        <div id="exito" role="status" tabindex="-1" hidden class="mt-8 rounded-xl border-l-4 border-emerald-700 bg-emerald-50 p-5 text-emerald-950">
+          <h2 class="text-xl font-bold">¡Registro validado!</h2>
+          <p id="exito-texto" class="mt-1"></p>
+          <p class="mt-3"><a href="index.html" class="font-semibold underline underline-offset-4">Volver al inicio</a></p>
+        </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="bg-stone-900 text-stone-100">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
+      <section aria-labelledby="pie-marca">
+        <h2 id="pie-marca" class="text-xl font-bold">Brasaland</h2>
+        <p class="mt-2 text-sm text-stone-200">Cocina a la brasa desde 2008. Restaurantes propios en Colombia y Florida (Estados Unidos).</p>
+      </section>
+      <section aria-labelledby="pie-contacto">
+        <h2 id="pie-contacto" class="text-xl font-bold">Contacto</h2>
+        <address class="mt-2 text-sm not-italic text-stone-200">
+          <p>Sede: Medellín, Colombia</p>
+          <p>Oficina comercial y de operaciones: Miami, Florida</p>
+          <p class="mt-2">Correo: <a href="mailto:contacto@brasaland.example" class="rounded text-orange-300 underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300">contacto@brasaland.example</a></p>
+        </address>
+      </section>
+      <nav aria-labelledby="pie-enlaces">
+        <h2 id="pie-enlaces" class="text-xl font-bold">Enlaces</h2>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a href="index.html" class="rounded text-orange-300 underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300">Inicio</a></li>
+          <li><a href="application.html" class="rounded text-orange-300 underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300">Registro en Brasa Points</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="border-t border-stone-700 px-4 py-4 text-center text-xs text-stone-300">© 2026 Brasaland. Sitio de demostración de la primera versión de Brasaland Digital.</p>
+  </footer>
+</body>
+</html>

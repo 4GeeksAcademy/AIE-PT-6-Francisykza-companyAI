@@ -1,0 +1,16 @@
+{
+  "name": "brasaland-domain-models",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Modelos y utilidades TypeScript de Brasaland para el sistema de pedidos de ingredientes",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts",
+    "check": "tsx src/checks.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.2"
+  }
+}
